@@ -6,17 +6,21 @@ import time
 from oauth2client.service_account import ServiceAccountCredentials
 
 # Stock symbols
+symbols_df = pd.read_csv("nse_symbols.csv")
 symbols = [
-    "RELIANCE.NS",
-    "TCS.NS",
-    "INFY.NS",
-    "HDFCBANK.NS",
-    "ICICIBANK.NS",
-    "SBIN.NS",
-    "ITC.NS",
-    "LT.NS",
-    "AXISBANK.NS",
-    "KOTAKBANK.NS"
+   # "RELIANCE.NS",
+   # "TCS.NS",
+   # "INFY.NS",
+   # "HDFCBANK.NS",
+   # "ICICIBANK.NS",
+   # "SBIN.NS",
+   # "ITC.NS",
+   # "LT.NS",
+   # "AXISBANK.NS",
+   # "KOTAKBANK.NS"
+    
+    str(sym).strip() + ".NS"
+    for sym in symbols_df["SYMBOL"]
 ]
 
 data = []
