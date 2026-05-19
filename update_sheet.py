@@ -74,7 +74,7 @@ creds = ServiceAccountCredentials.from_json_keyfile_name(
 client = gspread.authorize(creds)
 
 sheet = client.open(
-    "NSE STOCK SCANNER"
+       "NSE Stock Scanner"
 ).sheet1
 
 sheet.clear()
