@@ -23,6 +23,11 @@ symbols = [
     for sym in symbols_df["SYMBOL"]
 ]
 
+# 👇 ADD THESE LINES HERE
+print("CSV ROWS:", len(symbols_df))
+print("SYMBOLS LOADED:", len(symbols))
+print("FIRST 15 SYMBOLS:", symbols[:15])
+
 data = []
 
 for stock in symbols:
